@@ -3,9 +3,9 @@
 This repository packages the native RL-Games runtime used by UniLab's optional
 SimToolReal SAPG training entrypoint.
 
-It preserves 72 Python files selected from the SimToolReal RL-Games fork. Seven
-reviewed compatibility patches adapt the native runner to the Gymnasium and
-NumPy versions used by UniLab. `PATCHES.md` documents every patch and
+It preserves 72 Python files selected from the SimToolReal RL-Games fork. Nine
+reviewed compatibility patches adapt the native runner to the Gymnasium, NumPy,
+and the Torch 2.7+ AMP APIs used by UniLab. `PATCHES.md` documents every patch and
 `source_manifest.json` records the upstream provenance and hashes.
 
 The vendor intentionally does not include the 122 YAML files in the selected Source parent tree,

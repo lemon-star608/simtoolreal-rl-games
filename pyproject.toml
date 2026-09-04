@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "unilab-simtoolreal-rl-games"
-version = "1.6.1+simtoolreal.2a991753.compat2"
+version = "1.6.1+simtoolreal.2a991753.compat3"
 description = "Compatibility-patched SimToolReal Source RL-Games Python snapshot"
 readme = "README.md"
 requires-python = ">=3.10,<3.14"
@@ -20,7 +20,7 @@ dependencies = [
     "omegaconf>=2.3",
     "tensorboard>=2.8",
     "tensorboardX>=2.5",
-    "torch==2.7.0",
+    "torch>=2.7,<3",
 ]
 
 [tool.hatch.build.targets.wheel]

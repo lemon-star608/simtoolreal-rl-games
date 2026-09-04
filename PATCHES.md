@@ -2,6 +2,22 @@
 
 The pristine Git object and SHA256 remain the provenance anchor for each entry. The patched SHA256 is the only accepted runtime byte sequence.
 
+## `rl_games/algos_torch/a2c_continuous.py`
+
+- Pristine Git blob: `191e38e1704cccb150d75d166ad962b217f6d868`
+- Pristine SHA256: `b083a5c6a43b369e1da16755c4aff546b2d94e198b1c4479dbad2b48f95d806f`
+- Patched SHA256: `09a0407baa05c9d795c59734faa5d99ce2edcbcc93f7b7f242fb6bd70b0c2e6d`
+- Reason: Use the Torch 2.7+ `torch.amp.autocast` namespace while preserving the mixed-precision behavior.
+- Covering test: `tests/test_torch28_compat.py::test_training_code_uses_torch_amp_namespace`
+
+## `rl_games/algos_torch/a2c_discrete.py`
+
+- Pristine Git blob: `fc1bda892a8975f4505c6651dd8a43f53220e787`
+- Pristine SHA256: `513e77df9c8cb9311e42e4899cfa789aaff044c3eeffeabb8aeba04d77334b68`
+- Patched SHA256: `2a70b037d88e9006fb0adc7f63b2a2e9345261f839027601733ec091e3dd3725`
+- Reason: Use the Torch 2.7+ `torch.amp.autocast` namespace while preserving the mixed-precision behavior.
+- Covering test: `tests/test_torch28_compat.py::test_training_code_uses_torch_amp_namespace`
+
 ## `rl_games/algos_torch/players.py`
 
 - Pristine Git blob: `e511462f11acdba00ac7d1af3b8730194b349761`
@@ -14,9 +30,9 @@ The pristine Git object and SHA256 remain the provenance anchor for each entry. 
 
 - Pristine Git blob: `d3e778231faf5eac8ec5768c631b2ffd36fabaab`
 - Pristine SHA256: `a94ac0bf09c6c2253784a0dc2b6508c4cf0d3ab04d86d71e3483250f082aaf54`
-- Patched SHA256: `07b58e70bdb3634be6450e3f518e96d79ce0f5097f1363369f732383f2b27a6d`
-- Reason: Replace the eager legacy Gym import with Gymnasium and terminate the previously unterminated Source file with a newline; tensor formulas and control flow are unchanged.
-- Covering test: `tests/algos/rlgames_sapg/test_import.py::test_native_runner_agent_central_value_builder_and_player_are_vendored`
+- Patched SHA256: `22ef7f00a126f57422bc9050e2930c84678365d2f0856469586f38baf67fd9f9`
+- Reason: Replace the eager legacy Gym import with Gymnasium, use the Torch 2.7+ `torch.amp.GradScaler` namespace, and terminate the previously unterminated Source file with a newline; tensor formulas and control flow are unchanged.
+- Covering test: `tests/test_torch28_compat.py::test_training_code_uses_torch_amp_namespace`
 
 ## `rl_games/common/env_configurations.py`
 
